@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  java:
+    tty: true # Enables debugging capabilities when attached to this container.
+    image: 'eclipse/ubuntu_jdk8'
+    command: ["tail", "-f", "/dev/null"] # To keep the container running
+    volumes:
+      - .:/app
